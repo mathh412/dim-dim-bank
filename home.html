@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+    <nav>
+        <img src="imgs/logo.png" alt="logo" class="logo">
+        <div>
+            <a href="login.html"><button>Entrar</button></a>
+            <a href="cadastro.html"><button>Cadastrar</button></a>
+        </div>
+    </nav>
+    <main>
+        <h1>Seu futuro financeiro é o nosso investimento. Abra as portas para a sua melhor vida com o <span>banco
+                dimdim</span></h1>
+        <div>
+            <a href="cadastro.html"><button>Abra sua conta hoje</button></a>
+            <a href="#services"><button>Explorar produtos</button></a>
+        </div>
+    </main>
+    <section id="services">
+        <h2>Um banco que atende a todas suas necessidades</h2>
+        <div>
+            <div class="card">
+                <img src="imgs/poupança.jpg" alt="imagem">
+                <aside>
+                    <h3>Contas correntes e poupança</h3>
+                    <p>Nossas contas oferecem flexibilidade e segurança para suas finanças diárias, com diversas opções
+                        de poupança para ajudá-lo a alcançar suas metas.</p>
+                </aside>
+            </div>
+            <div class="card">
+                <img src="imgs/empréstimo.jpg" alt="imagem">
+                <aside>
+                    <h3>Empréstimos e financiamentos</h3>
+                    <p>Oferecemos uma variedade de opções de empréstimos e financiamentos com taxas competitivas e
+                        condições flexíveis.</p>
+                </aside>
+            </div>
+            <div class="card">
+                <img src="imgs/cartões.jpg" alt="imagem">
+                <aside>
+                    <h3>Cartões de crédito</h3>
+                    <p>Escolha entre nossos cartões de crédito, cada um com benefícios exclusivos e recompensas que se
+                        adaptam ao seu estilo de vida.</p>
+                </aside>
+            </div>
+            <div class="card">
+                <img src="imgs/investimento.webp" alt="imagem">
+                <aside>
+                    <h3>Investimentos</h3>
+                    <p>Explore nossas opções de investimentos, desde fundos de ações até planos de aposentadoria, para
+                        garantir um futuro financeiro seguro.</p>
+                </aside>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <img src="imgs/beto.png" alt="beto">
+        <div>
+            <h2>FAQ</h2>
+            <details>
+                <summary>Como faço para recuperar minha senha do banco digital?</summary>
+                <p>Para recuperar sua senha, basta acessar a opção "Esqueci minha senha" no site.
+                    Você receberá instruções sobre como redefinir sua senha através do e-mail cadastrado ou de um código
+                    de verificação via SMS.</p>
+            </details>
+            <details>
+                <summary>Quais medidas de segurança o banco digital adota para proteger meus dados?</summary>
+                <p>Utilizamos tecnologias avançadas de segurança, como criptografia de ponta a ponta, autenticação de
+                    dois fatores e monitoramento constante para proteger suas informações pessoais e transações
+                    financeiras. Além disso, oferecemos recursos de segurança adicionais, como biometria e tokens de
+                    segurança.</p>
+            </details>
+            <details>
+                <summary>Quanto tempo leva para abrir uma conta em um banco digital?</summary>
+                <p>O processo de abertura de conta é rápido e leva apenas alguns
+                    minutos. Após enviar seus documentos e passar pela verificação de identidade, sua conta geralmente é
+                    aprovada em questão de horas.</p>
+            </details>
+            <details>
+                <summary>O banco digital oferece investimentos?</summary>
+                <p>Sim, nós oferecemos opções de investimentos, como CDBs, fundos de investimento,
+                    Tesouro Direto, entre outros. Você pode acessar esses investimentos diretamente
+                    pelo site e começar a investir de forma simples e segura.</p>
+            </details>
+        </div>
+    </section>
+    <footer>
+        <div class="content">
+            <img src="imgs/logo.png" alt="Logo" class="logo">
+            <div class="info">
+                <h3>Entre em Contato</h3>
+                <p>Telefone: (XX) XXXX-XXXX</p>
+                <p>Email: contato@bancodimdim.com</p>
+            </div>
+            <div class="social-media">
+                <h3>Nossas Redes Sociais</h3>
+                <a href="#"><img src="imgs/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="imgs/linkedin.webp" alt="Twitter"></a>
+                <a href="#"><img src="imgs/instagram.webp" alt="Instagram"></a>
+                <a href="https://github.com/capelosini/DimDimBank"><img src="imgs/github.svg" alt="github"></a>
+            </div>
+        </div>
+        <p>© 2024 Banco DimDim. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const details = document.querySelectorAll("details")
+        details.forEach(detail => {
+            detail.addEventListener("click", () => {
+                details.forEach(otherDetail => {
+                    if (otherDetail != detail && otherDetail.open) {
+                        otherDetail.removeAttribute('open')
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

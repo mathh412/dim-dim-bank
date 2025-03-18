@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <script src="https://kit.fontawesome.com/065395de04.js" crossorigin="anonymous"></script>
+    <title>Dim Dim Bank</title>
+</head>
+<body>
+    <nav>
+        <img src="imgs/logo.png" alt="logo" class="logo">
+    </nav>
+    <img class="user-img" src="./imgs/profile.png" alt="User Profile Image">
+    <div class="main">
+        <div class="container">
+            <a href="#" class="nav-item nav-button">
+                <button class="nav-item"> 
+                    <i class="fa-solid fa-user icon"></i>
+                    <br> <span id="userName"></span>
+                </button>
+            </a>
+            <a href="#" class="nav-item nav-button">
+                <button class="nav-item"><i class="fa-solid fa-wallet icon"></i>
+                    <br> <span id="userMoney">R$</span>
+                </button>
+            </a>
+            <a href="#" class="nav-item nav-button">
+                <button class="nav-item"> 
+                    <i class="fa-solid fa-credit-card icon"></i>
+                    <br> <span>Tipo: Black💎</span>
+                </button>
+            </a>
+            <a href="#" class="nav-item nav-button">
+                <button onclick="user.logout(); window.location.href='login.html'" class="nav-item" style="background-color: rgb(250, 58, 58);">
+                    <i class="fa-solid fa-door-open"></i>
+                    <br> Logout
+                </button>
+            </a>
+        </div>
+        <div class="container">
+            <a href="#" class="nav-item nav-button">
+                <button class="nav-item" id="pagamentosButton">
+                    <i class="fa-solid fa-barcode icon"></i>
+                    <br> Pagamentos
+                </button>
+            </a>
+            <a href="#" class="nav-item nav-button">
+                <button class="nav-item" id="investimentosButton">
+                    <i class="fa-solid fa-money-bill-trend-up icon"></i>
+                    <br>Investimentos
+                </button>
+            </a>
+            <a href="#" class="nav-item nav-button">
+                <button class="nav-item" id="extratoButton">
+                    <i class="fa-solid fa-money-check icon"></i>
+                    <br>Extrato
+                </button>
+            </a>
+        </div>
+    </div>
+    <script src="script/User.js"></script>
+    <script src="script/dashboard.js"></script>
+</body>
+</html>
