@@ -1,0 +1,83 @@
+body{
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+body.login{
+    background: url(../imgs/bg3.png);
+}
+body.cadastro{
+    background: url(../imgs/bg4.png);
+}
+body.cadastro, body.login{
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+nav{
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    text-align: right;
+    background-color: transparent;
+    top: 0;
+}
+nav *{
+    display: inline-block;
+}
+form{
+    text-align: center;
+    width: 350px;
+    margin: 150px auto 0 auto;
+    padding: 50px;
+    background: linear-gradient(180deg, #252525c5, #000);
+    border-radius: 7px;
+    box-shadow: #000 0 0 20px;
+}
+form#cadastroForm{
+    width: 400px;
+}
+form input{
+    background-color: #040404;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    outline: none;
+    text-align: center;
+    color: #0097b2;
+    width: 100%;
+}
+form button{
+    width: 80%;
+    margin: 10px 0 0 0;
+    background-color: #7dd5f6;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+form .links{
+    margin-top: 30px;
+}
+form .links a{
+    color: #0097b2;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    margin: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+form img{
+    width: 100px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    box-shadow: #000 0 0 10px;
+}
+.navLogo{
+    width: 100px;
+}
+
+/* #7ddd5f6 */
