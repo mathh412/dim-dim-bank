@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dim Dim Bank - Dashboard</title>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard-spa.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/065395de04.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <img src="imgs/logo.png" alt="Dim Dim Bank" class="logo">
+            </div>
+            
+            <div class="user-profile">
+                <img src="imgs/profile.png" alt="Profile" class="avatar">
+                <h3 id="uiName">Carregando...</h3>
+                <p class="account-type">Cliente Black 💎</p>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-btn active" onclick="app.router('home')">
+                    <i class="fa-solid fa-house"></i> Início
+                </button>
+                <button class="nav-btn" onclick="app.router('payments')">
+                    <i class="fa-solid fa-barcode"></i> Pagamentos
+                </button>
+                <button class="nav-btn" onclick="app.router('investments')">
+                    <i class="fa-solid fa-chart-line"></i> Investimentos
+                </button>
+                <button class="nav-btn" onclick="app.router('extract')">
+                    <i class="fa-solid fa-list"></i> Extrato
+                </button>
+            </nav>
+
+            <button class="logout-btn" onclick="User.logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> Sair
+            </button>
+        </aside>
+
+        <main class="content-area">
+            
+            <section id="view-home" class="view-section">
+                <header>
+                    <h1>Bem-vindo de volta!</h1>
+                    <div class="balance-card">
+                        <span>Saldo Disponível</span>
+                        <h2 id="uiBalance">R$ 0,00</h2>
+                    </div>
+                </header>
+                
+                <div class="quick-actions">
+                    <h3>Acesso Rápido</h3>
+                    <div class="cards-grid">
+                        <div class="card" onclick="app.router('payments')">
+                            <i class="fa-solid fa-pix"></i>
+                            <span>Fazer Pix</span>
+                        </div>
+                        <div class="card" onclick="app.router('investments')">
+                            <i class="fa-solid fa-coins"></i>
+                            <span>Investir</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="view-payments" class="view-section hidden">
+                <h2>Realizar Pagamento</h2>
+                <form id="paymentForm" class="form-box">
+                    <input type="text" placeholder="Nome do Beneficiário" required>
+                    <input type="text" placeholder="CPF/CNPJ" class="cpf-mask" required>
+                    <input type="text" id="payAmount" placeholder="Valor (R$)" class="money-mask" required>
+                    
+                    <div class="radio-group" style="margin: 20px 0;">
+                        <label style="margin-right: 15px;"><input type="radio" name="method" value="PIX" checked> PIX</label>
+                        <label><input type="radio" name="method" value="CREDIT"> Cartão de Crédito</label>
+                    </div>
+
+                    <button type="submit" class="btn">Confirmar Pagamento</button>
+                </form>
+            </section>
+
+            <section id="view-investments" class="view-section hidden">
+                <h2>Investimentos</h2>
+                <div class="split-view">
+                    <form id="investForm" class="form-box">
+                        <label>Tipo de Aplicação</label>
+                        <select id="investType">
+                            <option value="CDB">CDB (Renda Fixa)</option>
+                            <option value="ACAO">Ações (B3)</option>
+                            <option value="CRIPTO">Criptomoedas</option>
+                        </select>
+                        <input type="text" id="investAmount" placeholder="Valor do Aporte (R$)" class="money-mask" required>
+                        <button type="submit" class="btn">Investir Agora</button>
+                    </form>
+                    <div class="chart-container">
+                        <canvas id="investmentChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <section id="view-extract" class="view-section hidden">
+                <h2>Histórico de Transações</h2>
+                <ul id="extractList" class="transaction-list">
+                    </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script/User.js"></script>
+    <script src="script/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dim Dim Bank - Home</title>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        /* Estilos específicos apenas da Home para não poluir o global */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('imgs/cidade.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero span { color: var(--primary-color); }
+        .cta-buttons { display: flex; gap: 20px; margin-top: 30px; }
+        .btn-outline { background: transparent; border: 2px solid white; color: white; }
+        .btn-outline:hover { background: white; color: black; }
+        
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 20px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 100;
+        }
+        .nav-logo { width: 100px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="imgs/logo.png" alt="Dim Dim Bank" class="nav-logo">
+        <div>
+            <a href="login.html"><button class="btn">Entrar</button></a>
+            <a href="cadastro.html"><button class="btn btn-outline">Cadastrar</button></a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <h1>Seu futuro financeiro começa aqui.<br>Bem-vindo ao <span>Dim Dim Bank</span>.</h1>
+        <p>Segurança, tecnologia e rendimento para você ir mais longe.</p>
+        
+        <div class="cta-buttons">
+            <a href="cadastro.html"><button class="btn" style="font-size: 1.2rem;">Abra sua conta</button></a>
+            <a href="#services"><button class="btn btn-outline" style="font-size: 1.2rem;">Saiba mais</button></a>
+        </div>
+    </main>
+</body>
+</html>

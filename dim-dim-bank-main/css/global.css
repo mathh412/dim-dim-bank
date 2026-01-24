@@ -1,0 +1,55 @@
+:root {
+    --primary-color: #7dd5f6;
+    --primary-hover: #2f91b4;
+    --bg-dark: #1a1a1a;
+    --bg-card: rgba(0, 0, 0, 0.8);
+    --text-white: #ffffff;
+    --text-muted: #b3b3b3;
+    --danger: #ff4d4d;
+    --success: #00b894;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    /* Imagem de fundo padrão caso não haja específica */
+    background-image: url("../imgs/bg4.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Utilitários */
+.hidden { display: none !important; }
+
+/* Inputs e Botões Globais */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    background-color: #0b0b0b;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: var(--primary-color);
+    outline: none;
+    font-size: 1rem;
+}
+input:focus { border-color: var(--primary-color); }
+
+.btn {
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.btn:hover { background-color: var(--primary-hover); transform: scale(1.02); }

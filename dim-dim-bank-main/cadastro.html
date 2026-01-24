@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dim Dim Bank - Cadastro</title>
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/logcad.css">
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+</head>
+<body class="cadastro-bg">
+    <nav>
+        <a href="index.html">
+            <img class="navLogo" src="imgs/logo.png" alt="Logo">
+        </a>
+    </nav>
+
+    <form id="cadastroForm">
+        <h2>Criar Conta</h2>
+        
+        <input type="text" placeholder="Nome Completo" id="name" required>
+        <br>
+        <input id="cpfCnpj" class="cpf-mask" placeholder="CPF" type="text" required>
+        <br>
+        <input type="email" placeholder="Email" id="email" required>
+        <br>
+        <label style="color: #bbb; font-size: 0.8rem; display:block; text-align:left;">Data de Nascimento</label>
+        <input type="date" id="birthDate" required>
+        <br>
+        <input type="password" placeholder="Crie uma Senha" id="password" required>
+        
+        <div id="extraInfoDiv">
+            <input type="text" placeholder="Nome Fantasia (Opcional)" id="nomeFantasia">
+            <br>
+            <input type="text" placeholder="Razão Social (Opcional)" id="social">
+        </div>
+        
+        <div class="links">
+            <a href="login.html">Já possui uma conta? Faça Login</a>
+        </div>
+        <br>
+        <button type="submit" class="btn">Cadastrar</button>
+    </form>
+
+    <script src="script/User.js"></script>
+    <script src="script/logcad.js"></script>
+</body>
+</html>
