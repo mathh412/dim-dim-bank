@@ -50,7 +50,7 @@ Este projeto foi desenvolvido para demonstrar domínio sobre os fundamentos do d
 ## 📂 Estrutura do Projeto
 
 ```text
-/
+dim-dim-bank/
 ├── index.html        # Landing Page (Página Inicial)
 ├── login.html        # Tela de Login
 ├── cadastro.html     # Tela de Cadastro
